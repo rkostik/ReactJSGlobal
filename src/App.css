@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background: url(/src/images/city2.webp);
+  /*background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;*/
+  position:absolute;
+  width: 1260px;
+  height: 683px;
+  left:28px;
+  top:-48px;
+  mix-blend-mode: normal;
+  /*opacity: 0.3;
+  filter: blur(8.15485);*/
+}
+
+
+
+.App-div{
+  font-size: calc(10px + 2vmin);
+  min-height: 300px;
+  min-width: 300px;
+}

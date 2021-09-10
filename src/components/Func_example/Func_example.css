@@ -1,0 +1,12 @@
+
+.main {
+    position: absolute;
+    width: 713px;
+ height: 57px;
+    left: 178px;
+    top:242px;
+    background: rgba(50,50,50,0.8);
+    max-blend-mode: normal;
+    opacity:0.7;
+    border-radius: 4px;
+}
