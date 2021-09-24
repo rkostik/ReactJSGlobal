@@ -9,31 +9,6 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         chunkFilename: '[name].bundle.js'
     },
-    resolve: {
-        fallback: {
-            "fs": false,
-            "tls": false,
-            "net": false,
-            "path": false,
-            "zlib": false,
-            "http": false,
-            "https": false,
-            "stream": false,
-            "crypto": false,
-            "util": false,
-            "buffer": false,
-            "vm": false,
-            "os": false,
-            "assert": false,
-            "uglify-js": false,
-            "esbuild": false,
-            "worker_threads": false,
-            "child_process": false,
-            "constants": false,
-            "@swc/core": false,
-            "inspector": false
-        }
-    },
     stats: {
         colors: true,
         modules: true,
@@ -52,7 +27,7 @@ module.exports = {
         }
     },
     plugins: [new HtmlWebpackPlugin({
-        template: './src/index.html'
+            template: './public/index.html'
         }
     )],
     module: {
