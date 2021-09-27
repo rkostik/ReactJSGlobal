@@ -1,0 +1,17 @@
+
+.div_btn{
+    position: absolute;
+    width: 233px;
+    height: 57px;
+    left: 847px;
+    top:188px;
+    background: #f65261;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+::placeholder {
+    color: #e8d7a3;
+    font-size: 20px;
+}
+

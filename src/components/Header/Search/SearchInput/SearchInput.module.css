@@ -1,0 +1,19 @@
+
+.main {
+    position: absolute;
+    width: 713px;
+    height: 57px;
+    left: 120px;
+    top:188px;
+    right:367px;
+    bottom:151px;
+    background: rgba(50,50,50,0.8);
+    border-radius: 4px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    line-height: 24px;
+    color:#ffffff;
+    mix-blend-mode: normal;
+    opacity:0.9;
+    padding-left: 19px;
+}

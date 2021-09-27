@@ -1,0 +1,56 @@
+.card_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div_name {
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    margin-top: 13px;
+}
+
+.div_year {
+    width: 66px;
+    height: 26px;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    margin-top: 13px;
+}
+
+.h1_card {
+    width: 50px;
+    height: 17px;
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+.div_genre {
+    width: 323px;
+    height: 17px;
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color:#ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-top: 8px;
+}

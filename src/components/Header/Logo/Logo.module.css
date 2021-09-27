@@ -1,0 +1,21 @@
+.h1_box{
+    position: absolute;
+}
+
+.h1_logo{
+    font-family: Montserrat-Regular;
+    width: 151px;
+    height: 24px;
+    left:60px;
+    top:20px;
+    right: 989px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color:#f65261;
+    font-weight:normal;
+}
+
+.h1_prefix{
+    font-family: Montserrat-Bold;
+}

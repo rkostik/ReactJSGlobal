@@ -1,0 +1,13 @@
+import React from 'react';
+import BtnCSS from "../BtnAdd/BtnAdd.module.css";
+import PropTypes from 'prop-types';
+
+const TxtAdd = (props) => (
+    <div className={BtnCSS.txt_Add}>{props.text}</div>
+)
+
+TxtAdd.propTypes ={
+    text: PropTypes.string
+}
+
+export default TxtAdd

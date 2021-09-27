@@ -9,6 +9,7 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         chunkFilename: '[name].bundle.js'
     },
+    devtool: 'source-map',
     stats: {
         colors: true,
         modules: true,
@@ -33,7 +34,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js|jsx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -42,6 +43,26 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /\.css$/i,
+                use: [
+                    // [style-loader](/loaders/style-loader)
+                    { loader: 'style-loader' },
+                    // [css-loader](/loaders/css-loader)
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            sourceMap: true,
+                            url: true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(svg|jpg|webp|png)$/i,
+                type: 'asset'
+            }
         ],
     }
 };

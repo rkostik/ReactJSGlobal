@@ -1,0 +1,11 @@
+
+.head {
+    /*position:absolute;*/
+    background: url(/src/images/backgroundM.webp);
+    background-size: cover;
+  /*  opacity:0.3;
+    filter: blur(8px);*/
+    width: 1200px;
+    height: 396px;
+    margin-bottom: 10px;
+}
