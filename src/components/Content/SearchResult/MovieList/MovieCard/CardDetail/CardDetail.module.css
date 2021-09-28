@@ -3,7 +3,7 @@
     justify-content: space-between;
 }
 
-.div_name {
+.card_name {
     font-family: Montserrat-Regular;
     font-style: normal;
     font-weight: 500;
@@ -15,7 +15,7 @@
     margin-top: 13px;
 }
 
-.div_year {
+.card_year {
     width: 66px;
     height: 26px;
     mix-blend-mode: normal;
@@ -25,7 +25,7 @@
     margin-top: 13px;
 }
 
-.h1_card {
+.style_year {
     width: 50px;
     height: 17px;
     font-family: Montserrat-Regular;
@@ -41,7 +41,7 @@
     padding: 3px;
 }
 
-.div_genre {
+.card_genre {
     width: 323px;
     height: 17px;
     font-family: Montserrat-Regular;

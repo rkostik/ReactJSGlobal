@@ -1,10 +1,10 @@
 import React from 'react';
-import TxtCSS from './Text.module.css';
+import styles from './Text.module.css';
 import PropTypes from 'prop-types';
 
 const Text = (props) =>
      (
-         <div className={TxtCSS.btn_txt} onClick={props.onClick}>
+         <div className={styles.btn_txt} onClick={props.onClick}>
               {props.text}
          </div>
      )

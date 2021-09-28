@@ -4,10 +4,10 @@ import Amount from "./Amount/Amount.jsx";
 import MovieList from './MovieList/MovieList.jsx';
 
 
-const SearchResult = (props) => (
+const SearchResult = () => (
     <>
         <Amount amount={'6'} text={SEARCH_RESULT}/>
-        <MovieList arr={MOVIES}/>
+        <MovieList list={MOVIES}/>
     </>
 )
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import MarkerCSS from './Marker.module.css';
+import styles from './Marker.module.css';
 
 const Marker = () => (
-    <div className={MarkerCSS.marker_box}>
-    </div>
+    <div className={styles.marker_box}/>
 )
 export default Marker

@@ -1,8 +1,8 @@
 import React from 'react';
-import BtnCSS from './BtnAdd.module.css';
+import styles from './BtnAdd.module.css';
 
 const BtnAdd = ()=>(
-    <div className={BtnCSS.div_btnAdd}>
+    <div className={styles.div_btnAdd}>
     </div>
 )
 export default BtnAdd

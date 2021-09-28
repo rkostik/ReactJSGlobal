@@ -1,9 +1,9 @@
 import React from 'react';
-import BtnCSS from "../BtnAdd/BtnAdd.module.css";
+import styles from "../BtnAdd/BtnAdd.module.css";
 import PropTypes from 'prop-types';
 
 const TxtAdd = (props) => (
-    <div className={BtnCSS.txt_Add}>{props.text}</div>
+    <div className={styles.txt_Add}>{props.text}</div>
 )
 
 TxtAdd.propTypes ={

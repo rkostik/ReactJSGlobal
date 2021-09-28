@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "./Logo/Logo.jsx";
-import HeaderCSS from './Header.module.css';
+import styles from './Header.module.css';
 import BtnAdd from "./BtnAdd/BtnAdd.jsx";
 import TxtAdd from "./TxtAdd/TxtAdd.jsx";
 import SearchInput from "./Search/SearchInput/SearchInput.jsx";
@@ -12,7 +12,7 @@ import HeaderTitle from "./HeaderTitle/HeaderTitle.jsx";
 
 
 const Header = () => (
-    <div className={HeaderCSS.head}>
+    <div className={styles.head}>
         <Logo prefix="netflix" postfix="roulette"/>
         <BtnAdd />
         <TxtAdd text="+add movie"/>

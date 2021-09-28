@@ -1,13 +1,12 @@
 import React from 'react';
-import SearchCSS from './SearchInput.module.css';
+import styles from './SearchInput.module.css';
 import PropTypes from "prop-types";
 
 const SearchInput = (props) => (
-    <input className={SearchCSS.main} placeholder={props.title}>
-    </input>
+    <input className={styles.main} placeholder={props.title}/>
 )
 
-SearchInput.propTypes ={
+SearchInput.propTypes = {
     title: PropTypes.string
 }
 

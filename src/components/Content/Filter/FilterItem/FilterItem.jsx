@@ -1,9 +1,16 @@
 import React from 'react';
-import FilterCSS from '../Filter.module.css';
+import styles from '../Filter.module.css';
+import PropTypes from "prop-types";
+
 
 const FilterItem = (props) => (
-    <div className={`${FilterCSS.filter_item} ${(props.name==='sort by') ? FilterCSS.item_opacity:null}`}>
+    <div className={`${styles.filter_item} ${(props.name==='sort by') ? styles.item_opacity:null}`}>
         {props.name}
     </div>
 )
+
+FilterItem.propTypes= {
+    name: PropTypes.string
+}
+
 export default FilterItem
