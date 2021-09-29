@@ -1,10 +1,10 @@
 import React from "react";
-import {ERROR_MESSAGE} from '../../const.js';
+import {CONST_ARR} from '../../const.js';
 
 const ErrorBoundry =(props) =>{
     const ErrTxt = () =>(
         <h1>
-            {ERROR_MESSAGE}
+            {CONST_ARR.ERROR_MESSAGE}
         </h1>
     )
 

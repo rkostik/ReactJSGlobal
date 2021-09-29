@@ -9,21 +9,20 @@
     border-radius: 4px;
 }
 .txt_Add{
-    position: absolute;
     height: 24px;
     font-family: Montserrat-Regular;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
     color:#f65261;
-    top:31px;
-    left:985px;
+    margin-top: 11px;
 }
 
 .txt_Add:hover {
     transform: scale(1.05);
+    transition: 0.4s;
     cursor: pointer;
 }

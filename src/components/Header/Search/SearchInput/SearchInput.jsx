@@ -3,11 +3,11 @@ import styles from './SearchInput.module.css';
 import PropTypes from "prop-types";
 
 const SearchInput = (props) => (
-    <input className={styles.main} placeholder={props.title}/>
+    <input className={styles.main} placeholder={props.placeholder}/>
 )
 
 SearchInput.propTypes = {
-    title: PropTypes.string
+    placeholder: PropTypes.string
 }
 
 export default SearchInput

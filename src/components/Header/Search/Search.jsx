@@ -1,19 +1,21 @@
 import React from 'react';
-import Button from "../Button/Button.jsx";
-import Text from "../Text/Text.jsx";
-import SearchInput from "./SearchInput/SearchInput.jsx";
+import BtnSearch from '../BtnSearch/BtnSearch.jsx';
+import SearchInput from './SearchInput/SearchInput.jsx';
+import SearchTitle from '../SearchTitle/SearchTitle.jsx';
 import PropTypes from 'prop-types';
 
 const Search = (props) => (
     <>
-        <SearchInput title='What dod you want to watch?'/>
-        <Button/>
-        <Text name={props.name}/>
+        <SearchTitle title={props.title}/>
+        <SearchInput placeholder={props.placeholder}/>
+        <BtnSearch text={props.text}/>
     </>
 )
 
 Search.propTypes ={
-    name: PropTypes.string
+    title: PropTypes.string,
+    text: PropTypes.string,
+    placeholder: PropTypes.string
 }
 
 export default Search

@@ -5,7 +5,16 @@ import PropTypes from 'prop-types';
 
 const MovieCard = (props) => (
     <div>
-        <img src={props.elem.url}/>
+        <div className={styles.card}>
+            <div className={styles.circle}>
+                <div className={styles.circle_list}>
+                    <div className={styles.circle_list_item}></div>
+                    <div className={styles.circle_list_item}></div>
+                    <div className={styles.circle_list_item}></div>
+                </div>
+            </div>
+            <img src={props.elem.url}/>
+        </div>
         <CardDetail item={props.elem}/>
         <div className={styles.card_genre}>{props.elem.genre}</div>
     </div>

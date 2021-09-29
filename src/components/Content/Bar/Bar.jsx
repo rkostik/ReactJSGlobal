@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Bar.module.css';
-import Filter from '../Filter/Filter.jsx';
-import Sort from '../Sort/Sort.jsx';
+import Filter from './Filter/Filter.jsx';
+import Sort from './Sort/Sort.jsx';
 import PropTypes from "prop-types";
 
 const Bar = (props) => (
