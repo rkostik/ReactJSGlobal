@@ -1,0 +1,9 @@
+.ml_container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 55px;
+    margin-left: 60px;
+    margin-right: 57px;
+    margin-top: 28px;
+}

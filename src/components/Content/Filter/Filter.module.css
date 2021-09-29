@@ -1,0 +1,26 @@
+.filter_container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.filter_item{
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color:#ffffff;
+    margin: 15px;
+}
+
+.item_opacity{
+    opacity:0.6;
+}
+
+.filter_item:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

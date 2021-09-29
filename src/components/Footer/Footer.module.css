@@ -1,0 +1,20 @@
+.footer_container {
+    width: 1200px;
+    height: 70px;
+    background: #424242;
+}
+
+.div_footer_box {
+    padding: 22px;
+    text-align: center;
+}
+
+.div_footer {
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #f65261;
+    font-weight: normal;
+}
+

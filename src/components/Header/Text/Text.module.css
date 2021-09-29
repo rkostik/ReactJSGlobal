@@ -1,0 +1,20 @@
+.btn_txt{
+    position: absolute;
+    width: 86px;
+    height: 24px;
+    left: 921px;
+    top:206px;
+    font-style: normal;
+    font-weight: 500;
+    font-size:20px;
+    font-height:24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat-Regular";
+    color: #ffffff;
+}
+
+.btn_txt:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

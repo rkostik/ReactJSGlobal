@@ -1,0 +1,6 @@
+.sort_container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-top: 15px;
+}

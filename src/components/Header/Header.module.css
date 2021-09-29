@@ -1,0 +1,8 @@
+
+.head {
+    background: url(/src/images/backgroundM.webp);
+    background-size: cover;
+    width: 1200px;
+    height: 396px;
+    margin-bottom: 10px;
+}
