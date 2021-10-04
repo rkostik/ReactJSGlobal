@@ -1,0 +1,37 @@
+.main_dd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.select_block {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.select_block select{
+    background: none;
+    border:0;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color:#ffffff;
+}
+
+.select_block:after{
+    conten:"";
+    display:block;
+    border-style: solid;
+    border-width: 7px 6px 0 6px;
+    border-color: #f65261 transparent transparent transparent;
+    position: absolute;
+}
+
+.triangle{
+   margin-left: 13px;
+}

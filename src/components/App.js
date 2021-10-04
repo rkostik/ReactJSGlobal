@@ -1,16 +1,42 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './Header/Header.jsx';
 import Content from './Content/Content.jsx';
-import Footer from "./Footer/Footer.jsx";
-import ErrorBoundry from './ErrorBoundry/ErrorBoundry.jsx';
-import {CONST_ARR} from "../const";
+import Footer from './Footer/Footer.jsx';
+import {ADD_MOVIE_ARR, CONST_LIST} from '../const';
+import ModalMovie from './ModalMovie/ModalMovie.jsx'
+import Modal from './Modal/Modal.jsx';
+import Completion from './Confirmation/Completion/Completion.jsx';
+import Removal from './Confirmation/Removal/Removal.jsx';
 
-const App = () => (
-        <ErrorBoundry>
-            <Header prefix={CONST_ARR.PREFIX_LOGO} postfix={CONST_ARR.POSTFIX_LOGO} textAdd={CONST_ARR.BTN_ADD_TXT} placeholder={CONST_ARR.SEARCH_PLACEHOLDER} text={CONST_ARR.SEARCH_BTN_TXT} title={CONST_ARR.SEARCH_TITLE}/>
-            <Content/>
-            <Footer prefix={CONST_ARR.PREFIX_LOGO} postfix={CONST_ARR.POSTFIX_LOGO}/>
-        </ErrorBoundry>
-)
+const App = () => {
+    const [modalActive, setModalActive] = useState(false);
+    const [typeWindow, setType] = useState('add');
+    const handleClick = () => {
+        setModalActive(false)
+        setType('add');
+    };
+    const editClick = () => {
+        setModalActive(true);
+        setType('edit');
+    };
+    const addClick = () => setModalActive(true);
+
+    useEffect(() => {
+        console.log(modalActive);
+    }, [modalActive])
+
+    return (
+        <>
+            <Header arrConst={CONST_LIST} addClick={addClick}/>
+            <Content editClick={editClick}/>
+            <Footer arrConst={CONST_LIST}/>
+            <Modal active={modalActive} setActive={setModalActive}>
+                <ModalMovie add_movie_arr={ADD_MOVIE_ARR} handleClick={handleClick} type={typeWindow}/>
+                <Completion/>
+                <Removal/>
+            </Modal>
+        </>
+    )
+}
 
 export default App

@@ -63,7 +63,8 @@ module.exports = {
             {
                 test: /\.(svg|jpg|webp|png)$/i,
                 type: 'asset'
-            }
+            },
+
         ],
     }
 };
