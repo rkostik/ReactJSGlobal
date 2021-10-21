@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Pulp Fiction",
+    "genre": "Action & Adventure",
+    "year": "1994",
+    "description": "Faced with life's cruel irony, the unpredictable stories of a well-dressed pair of low-level hitmen; a gangster's statuesque moll, and a double-crossing prizefighter become inextricably intertwined, as the small-time crooks, Honey Bunny and Pumpkin, summon up the courage to hold up their favourite L.A. diner.",
+    "url": "images/pulp_fiction.png",
+    "rating": "8.9",
+    "runtime": "2h 34min"
+  },
+  {
+    "title": "Bohemian Rhapsody",
+    "genre": "Drama, Biography, Music",
+    "year": "2018",
+    "description": "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer Freddie Mercury. Freddie defied stereotypes and shattered convention to become one of the most beloved entertainers on the planet.",
+    "url": "images/bohemian_rhapsody.png",
+    "rating": "7.9",
+    "runtime": "2h 14min"
+  },
+  {
+    "title": "Kill Bill: Vol 2",
+    "genre": "Oscar winning Movie",
+    "year": "2004",
+    "description": "Kill Bill: Volume 2 is a 2004 American neo Western martial arts film written and directed by Quentin Tarantino. It stars Uma Thurman as the Bride, who continues her campaign of revenge against the Deadly Viper Assassination Squad (Lucy Liu, Michael Madsen, Daryl Hannah, and Vivica A.",
+    "url": "images/kill_bill.png",
+    "rating": "8.0",
+    "runtime": "2h 17min"
+  },
+  {
+    "title": "Avengers: War of Infinity",
+    "genre": "Action & Adventure",
+    "year": "2018",
+    "description": "Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. ... In the film, the Avengers and the Guardians of the Galaxy attempt to prevent Thanos from collecting the six all-powerful Infinity Stones as part of his quest to kill half of all life in the universe.",
+    "url": "images/avengers.png",
+    "rating": "8.4",
+    "runtime": "2h 29min"
+  },
+  {
+    "title": "Inception",
+    "genre": "Action & Adventure",
+    "year": "2010",
+    "description": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets.",
+    "url": "images/inception.png",
+    "rating": "8.8",
+    "runtime": "2h 28min"
+  },
+  {
+    "title": "Reservoir Dogs",
+    "genre": "Oscar winning Movie",
+    "year": "1992",
+    "description": "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant. Six criminals, who are strangers to each other, are hired by a crime boss, Joe Cabot, to carry out a diamond robbery. ... They are completely sure that the robbery is going to be a success.",
+    "url": "images/reservoir_dogs.png",
+    "rating": "8.3",
+    "runtime": "1h 39min"
+  }
+]

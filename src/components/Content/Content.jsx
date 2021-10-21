@@ -9,7 +9,8 @@ const Content = (props) => (
     <div className={styles.content_body}>
         <Bar sort_list={CONST_ARR.SORT_LIST} filter_list={CONST_ARR.FILTER_LIST}/>
         <Marker/>
-        <SearchResult text={CONST_LIST.SEARCH_RESULT} amount={'6'} list={MOVIES} editClick={props.editClick}/>
+        <SearchResult text={CONST_LIST.SEARCH_RESULT} amount={'6'} movies={props.movies} deleteClick={props.deleteClick}
+                  movieClick={props.movieClick}  itemKey={props.itemKey} editClick={props.editClick} active={props.active} ddmOpenClick={props.ddmOpenClick} closeClick={props.closeClick}/>
     </div>
 )
 export default Content

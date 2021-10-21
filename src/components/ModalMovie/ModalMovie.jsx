@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './ModalMovie.module.css';
 import Close from '../Confirmation/Close/Close.jsx';
 import Button from '../Button/Button.jsx';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 const ModalMovie = (props) => (
     <div className={styles.addMovie_window}>
@@ -27,8 +29,10 @@ const ModalMovie = (props) => (
                 <div className={styles.right_block}>
                     <label htmlFor={props.add_movie_arr.release_date}>{props.add_movie_arr.release_date}</label>
                     <div className={styles.date_select} name={props.add_movie_arr.release_date}>
-                        <div className={`${styles.text_default} ${styles.text_placeholder}`}>{props.add_movie_arr.select_date}</div>
-                        <div className={styles.icon}><img src='images/calendar.png' alt=''/></div>
+                        <div
+                            className={`${styles.text_default} ${styles.text_placeholder}`}>{props.add_movie_arr.select_date}</div>
+                        <div className={styles.icon}><img src='images/calendar.png' alt='' onClick={props.openClick}/>
+                        </div>
                     </div>
                     <label htmlFor={props.add_movie_arr.rating}>{props.add_movie_arr.rating}</label>
                     <input type='text' name={props.add_movie_arr.rating}
@@ -49,6 +53,9 @@ const ModalMovie = (props) => (
                 <Button btn_block_style='btn_block_black' btn_style='btn_submit' txt_style='txt_reset' textBtn='reset'/>
                 <Button btn_block_style='btn_block_coral' btn_style='btn_submit' txt_style='txt_confirm'
                         textBtn='submit'/>
+            </div>
+            <div className={`${styles.calendar_box} ${props.activeCalendar ? styles.active : styles.inactive}`}>
+                <Calendar className={styles.calendar}/>
             </div>
         </form>
     </div>

@@ -64,7 +64,11 @@ module.exports = {
                 test: /\.(svg|jpg|webp|png)$/i,
                 type: 'asset'
             },
-
+            {
+                test: /\.json$/,
+                use: ['json-loader'],
+                type: 'javascript/auto'
+            }
         ],
     }
 };
