@@ -1,8 +1,7 @@
 import React from 'react';
-import BtnSearch from '../BtnSearch/BtnSearch.jsx';
+import BtnSearch from './BtnSearch/BtnSearch.jsx';
 import SearchInput from './SearchInput/SearchInput.jsx';
-import SearchTitle from '../SearchTitle/SearchTitle.jsx';
-import PropTypes from 'prop-types';
+import SearchTitle from './SearchTitle/SearchTitle.jsx';
 
 const Search = (props) => (
     <>
@@ -11,11 +10,5 @@ const Search = (props) => (
         <BtnSearch text={props.text}/>
     </>
 )
-
-Search.propTypes ={
-    title: PropTypes.string,
-    text: PropTypes.string,
-    placeholder: PropTypes.string
-}
 
 export default Search
