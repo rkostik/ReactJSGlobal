@@ -12,8 +12,8 @@ const Bar = (props) => (
 )
 
 Bar.propTypes = {
-    filter_list: PropTypes.arrayOf(PropTypes.string),
-    sort_list: PropTypes.arrayOf(PropTypes.string)
+    filter_list: PropTypes.arrayOf(PropTypes.string.isRequired),
+    sort_list: PropTypes.arrayOf(PropTypes.string.isRequired)
 }
 
 export default Bar

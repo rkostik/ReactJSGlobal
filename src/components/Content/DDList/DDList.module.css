@@ -1,0 +1,63 @@
+.main_dd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.select_block {
+    position: relative;
+    display: flex;
+    width: 11em;
+    height: 2em;
+    line-height: 2;
+    background: #232323;
+    overflow: hidden;
+    border-radius: 0.25em;
+}
+
+select{
+    border:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: #232323 none;
+    flex:1;
+    padding: 0.5em;
+    color:#ffffff;
+    cursor: pointer;
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    /*direction: rtl;*/
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.select_block::after{
+    content:'\25BC';
+    display:block;
+    position: absolute;
+    top:0;
+    right:0;
+    padding:0 1em;
+    cursor:pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+    color: #f65261;
+}
+
+.triangle{
+   margin-left: 13px;
+}
+
+.select_block:hover::after{
+    color: #f65261;
+}

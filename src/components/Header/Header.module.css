@@ -1,8 +1,35 @@
 
 .head {
-    background: url(/src/images/backgroundM.webp);
+    background: url(/src/images/movie_bg3.webp);
     background-size: cover;
+    width: 1200px;
+    height: 396px;
+    transform: scale(1);
+    position: absolute;
+}
+
+.head_view {
+    background: #232323;
+    width: 1200px;
+    height: 396px;
+    transform: scale(0);
+    position: absolute;
+}
+
+.wrap{
     width: 1200px;
     height: 396px;
     margin-bottom: 10px;
 }
+
+.head.active,.head_view.active{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.head.nonactive,.head_view.nonactive{
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+

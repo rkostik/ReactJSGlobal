@@ -1,0 +1,35 @@
+
+.div_btn{
+    position: absolute;
+    width: 233px;
+    height: 57px;
+    left: 847px;
+    top:188px;
+    background: #f65261;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+::placeholder {
+    color: #e8d7a3;
+    font-size: 20px;
+}
+
+.btn_txt{
+    height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size:20px;
+    font-height:24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat-Regular";
+    color: #ffffff;
+    margin-top: 18px;
+}
+
+.btn_txt:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    cursor: pointer;
+}

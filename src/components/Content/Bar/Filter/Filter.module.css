@@ -14,13 +14,14 @@
     text-transform: uppercase;
     color:#ffffff;
     margin: 15px;
+    align-self: center;
 }
 
 .item_opacity{
     opacity:0.6;
 }
 
-.filter_item:hover{
+.filter_item.non_sort:hover{
     transform: scale(1.1);
     transition: 0.4s;
     cursor: pointer;

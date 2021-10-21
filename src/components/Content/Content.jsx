@@ -1,15 +1,16 @@
 import React from 'react';
 import styles from './Content.module.css';
 import Bar from './Bar/Bar.jsx';
-import {SORT_LIST, FILTER_LIST} from "../../const.js";
+import {CONST_ARR, CONST_LIST, MOVIES} from "../../const.js";
 import Marker from "./Marker/Marker.jsx";
 import SearchResult from "./SearchResult/SearchResult.jsx";
 
-const Content = () => (
+const Content = (props) => (
     <div className={styles.content_body}>
-        <Bar sort_list={SORT_LIST} filter_list={FILTER_LIST}/>
+        <Bar sort_list={CONST_ARR.SORT_LIST} filter_list={CONST_ARR.FILTER_LIST}/>
         <Marker/>
-        <SearchResult/>
+        <SearchResult text={CONST_LIST.SEARCH_RESULT} amount={'6'} movies={props.movies} deleteClick={props.deleteClick}
+                  movieClick={props.movieClick}  itemKey={props.itemKey} editClick={props.editClick} active={props.active} ddmOpenClick={props.ddmOpenClick} closeClick={props.closeClick}/>
     </div>
 )
 export default Content

@@ -62,6 +62,8 @@
 
 .circle:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 img:hover {
@@ -73,6 +75,10 @@ img:hover {
     opacity: 1;
 }
 
+.circle_list:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 .circle_list {
     display: flex;
     flex-direction: column;
@@ -104,4 +110,8 @@ img:hover {
     height: 3px;
     position: relative;
     width: 3px;
+}
+
+.active {
+
 }
