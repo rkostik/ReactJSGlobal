@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../Filter.module.css';
-import DDList from '../../DDList/DDList.jsx';
+import DDList from '../../../DDList/DDList.jsx';
 import PropTypes from "prop-types";
 
 
