@@ -3,11 +3,11 @@ import BtnSearch from './BtnSearch/BtnSearch.jsx';
 import SearchInput from './SearchInput/SearchInput.jsx';
 import SearchTitle from './SearchTitle/SearchTitle.jsx';
 
-const Search = (props) => (
+const Search = () => (
     <>
-        <SearchTitle title={props.title}/>
-        <SearchInput placeholder={props.placeholder}/>
-        <BtnSearch text={props.text}/>
+        <SearchTitle/>
+        <SearchInput/>
+        <BtnSearch/>
     </>
 )
 

@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './Filter.module.css';
 import FilterItem from "./FilterItem/FilterItem.jsx";
 import PropTypes from 'prop-types';
+import {CONST_ARR} from '../../../../const.js'
 
-const Filter = (props) => (
+const Filter = () => (
     <div className={styles.filter_container}>
-        {props.list.map((elem,index) => {
+        {CONST_ARR.FILTER_LIST.map((elem,index) => {
           return  <FilterItem key={index} name={elem}/>
         })}
     </div>

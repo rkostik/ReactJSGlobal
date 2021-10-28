@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
 
 const Bar = (props) => (
     <div className={styles.bar_container}>
-        <Filter list={props.filter_list}/>
-        <Sort list={props.sort_list}/>
+        <Filter/>
+        <Sort/>
     </div>
 )
 

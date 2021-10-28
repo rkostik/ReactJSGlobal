@@ -4,11 +4,10 @@ import MovieList from './MovieList/MovieList.jsx';
 import PropTypes from "prop-types";
 
 
-const SearchResult = (props) => (
+const SearchResult = () => (
     <>
-        <Amount amount={props.amount} text={props.text}/>
-        <MovieList movies={props.movies} editClick={props.editClick} deleteClick={props.deleteClick}
-               movieClick={props.movieClick}  active={props.active} ddmOpenClick={props.ddmOpenClick} closeClick={props.closeClick} itemKey={props.itemKey}/>
+        <Amount/>
+        <MovieList/>
     </>
 )
 

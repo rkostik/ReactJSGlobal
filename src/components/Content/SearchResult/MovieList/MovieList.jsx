@@ -1,18 +1,20 @@
 import React from 'react';
 import styles from './MovieList.module.css';
 import MovieCard from './MovieCard/MovieCard.jsx';
+import {useSelector, useDispatch} from 'react-redux';
 
 
-const MovieList = (props) => (
-    <div className={styles.ml_container}>
-        {props.movies.map((item, index) => {
-            return <MovieCard key={index} elem={item} editClick={props.editClick} deleteClick={props.deleteClick}
-                              movieClick={props.movieClick} active={props.active}
-                              ddmOpenClick={props.ddmOpenClick} closeClick={props.closeClick} cardKey={index}
-                              itemKey={props.itemKey}/>
-        })}
-    </div>
-)
+const MovieList = () => {
+    const movies = useSelector(state => state.movies);
+    return (
+        <div className={styles.ml_container}>
+            {movies.map((item, index) => {
+                    return <MovieCard key={index} elem={item} cardKey={index}/>
+                }
+            )}
+        </div>
+    )
+}
 
 
 export default MovieList
