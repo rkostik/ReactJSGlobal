@@ -6,13 +6,12 @@ import Search from "./Search/Search.jsx";
 import PropTypes from "prop-types";
 
 
-const Header = (props) => (
+const Header = () => (
     <div className={styles.wrap}>
         <div className={styles.head}>
-            <Logo prefix={props.arrConst.PREFIX_LOGO} postfix={props.arrConst.POSTFIX_LOGO}/>
-            <BtnAdd textAdd={props.arrConst.BTN_ADD_TXT} addClick={props.addClick}/>
-            <Search placeholder={props.arrConst.SEARCH_PLACEHOLDER} text={props.arrConst.SEARCH_BTN_TXT}
-                    title={props.arrConst.SEARCH_TITLE}/>
+            <Logo/>
+            <BtnAdd/>
+            <Search/>
         </div>
      </div>
 )

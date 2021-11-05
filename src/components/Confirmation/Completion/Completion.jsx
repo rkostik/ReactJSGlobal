@@ -4,7 +4,7 @@ import {CONST_LIST} from '../../../const.js'
 import Confirmation from '../Confirmation.jsx';
 
 
-const Completion = (props) => (
+const Completion = () => (
     <Confirmation>
         <div className={styles.circle_confirm}>
             <img className={styles.tick} src='images/tick.png'/>
