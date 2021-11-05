@@ -13,14 +13,14 @@ const DDMenu = (props) => {
     const onCloseClick = useCallback(() => {
         dispatch(ddmCloseClick());
     }, []);
-    const onEditClick = useCallback(() => {
-        dispatch(editClick());
+    const onEditClick = useCallback((val) => {
+        dispatch(editClick(val));
     }, []);
     return(
         <div
             className={`${styles.ddm_block} ${ddmActive && item === props.ddmKey ? styles.active : styles.nonactive}`}>
             <div className={styles.close} onClick={()=>onCloseClick()}/>
-            <div className={styles.ddm_item} onClick={()=>onEditClick()}>
+            <div className={styles.ddm_item} onClick={()=>onEditClick(props.idMovie)}>
                 <div className={styles.ddm_txt}>Edit</div>
             </div>
             <div className={styles.ddm_item} onClick={()=>onDeleteClick()}>

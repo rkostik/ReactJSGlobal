@@ -23,5 +23,8 @@ html {
 body{
     background: #888888;
     min-width: 1200px;
-    min-height: 1717px;
+    min-height: 1800px;
+    font-family: Montserrat-Regular;
+    font-style: normal;
 }
+

@@ -23,7 +23,7 @@ const headerReducer = (state = {}, action) => {
         case actions.OPEN_CLICK:
             return {
                 ...state,
-                activeCalendar: !action.activeCalendar
+                activeCalendar: !state.activeCalendar
             }
         case actions.DDM_CLOSE_CLICK:
             return {
@@ -46,9 +46,11 @@ const headerReducer = (state = {}, action) => {
         case actions.EDIT_CLICK:
             return {
                 ...state,
-                modalActive: action.modalActive,
+                editActive: action.editActive,
                 typeWindow: action.typeWindow,
-                ddmActive: action.ddmActive
+                ddmActive: action.ddmActive,
+                calendarDate: action.calendarDate,
+                movie:action.movie
             }
         case actions.DEL_WINDOW_CLICK:
             return {
@@ -61,6 +63,11 @@ const headerReducer = (state = {}, action) => {
                 ...state,
                 deleteActive: action.deleteActive,
                 ddmActive: action.ddmActive
+            }
+        case actions.DEL_WINDOW_CLICK:
+            return {
+                ...state,
+                deleteActive: action.deleteActive
             }
         case actions.POPULATE_MOVIE_LIST:
             return {
@@ -80,6 +87,36 @@ const headerReducer = (state = {}, action) => {
             return {
                 ...state,
                 errMessage: action.errMessage
+            }
+        case actions.CHANGE_DATE:
+            return {
+                ...state,
+                calendarDate: action.calendarDate,
+                activeCalendar: action.activeCalendar
+            }
+        case actions.SELECT_GENRE:
+            return {
+                ...state,
+                optionSelected: action.optionSelected
+            }
+        case actions.RESET_FORM:
+            return {
+                ...state,
+                calendarDate: action.calendarDate,
+                optionSelected: action.optionSelected
+            }
+        case actions.AFTER_SUBMIT:
+            return {
+                ...state,
+                calendarDate: action.calendarDate,
+                optionSelected: action.optionSelected,
+                completeActive: action.completeActive
+            }
+        case actions.CLOSE_CONFIRM_WIN:
+            return {
+                ...state,
+                completeActive: action.completeActive,
+                deleteActive: action.deleteActive
             }
         default:
             return state

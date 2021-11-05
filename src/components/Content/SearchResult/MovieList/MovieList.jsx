@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './MovieList.module.css';
 import MovieCard from './MovieCard/MovieCard.jsx';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 
 const MovieList = () => {

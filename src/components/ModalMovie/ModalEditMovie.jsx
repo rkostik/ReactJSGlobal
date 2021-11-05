@@ -5,16 +5,25 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import {ADD_MOVIE_ARR} from '../../const';
 import {useSelector, useDispatch} from 'react-redux';
-import {closeAddMovieClick, openClick, changeDate, submitForm, resetForm} from "../../store/actions/actionCreators";
+import {
+    closeAddMovieClick,
+    openClick,
+    changeDate,
+    submitForm,
+    resetForm,
+    editSubmit
+} from "../../store/actions/actionCreators";
 import DropDownList from '../DropDownList/DropDownList.jsx';
-import {Formik, Form, Field, ErrorMessage} from 'formik';
+import {Formik, Form, Field} from 'formik';
 import btnStyle from '../Button/Button.module.css';
-import {getDate, getDateReverse} from '../../utils/utils.js';
+import {getDate, getDateReverse, stringToDate} from '../../utils/utils.js';
 import {addMovieSchema} from './validationLogic.js';
 
-const ModalMovie = () => {
+const ModalEditMovie = () => {
+
     const activeCalendar = useSelector(state => state.activeCalendar);
     const calendarDate = useSelector(state => state.calendarDate);
+    const movie=useSelector(state => state.movie);
     const dispatch = useDispatch();
     const onOpenClick = useCallback(() => {
         dispatch(openClick());
@@ -29,10 +38,10 @@ const ModalMovie = () => {
     const onReset = useCallback(() => {
         dispatch(resetForm());
     }, []);
-    const onSubmit = useCallback((values, {setSubmitting, resetForm}) => {
-        dispatch(submitForm(JSON.stringify(values, null, 2)));
+    const onSubmit = useCallback((values, {setSubmitting, resetForm, setFieldValue}, idVal) => {
+        setFieldValue('id', idVal);
+        dispatch(editSubmit(JSON.stringify(values, null, 2), idVal));
         setSubmitting(false);
-        resetForm({});
     }, []);
     const title = ADD_MOVIE_ARR.title;
     const movie_url = 'poster_path';
@@ -45,23 +54,24 @@ const ModalMovie = () => {
     return (
         <div className={styles.addMovie_window}>
             <h1 className={styles.mainTitle}>
-                {ADD_MOVIE_ARR.main_title}
+                {ADD_MOVIE_ARR.main_title_edit}
             </h1>
             <Close handleClick={() => onCloseAddMovieClick()}/>
             <Formik initialValues={{
-                title: '',
-                poster_path: '',
-                vote_average: '',
-                runtime: '',
-                overview: '',
-                release_date: '',
-                genre:''
+                id:movie.id,
+                title: movie.title,
+                poster_path: movie.poster_path,
+                vote_average: movie.vote_average,
+                runtime: movie.runtime,
+                overview: movie.overview,
+                release_date: movie.release_date,
+                genre:movie.genres
             }}
                     validationSchema={addMovieSchema}
                     onSubmit={onSubmit}
                     onReset={onReset}
             >
-                {({isSubmitting, setFieldValue, errors, touched, resetForm}) => (
+                {({isSubmitting, setFieldValue, errors, touched}) => (
                     <Form>
                         <div className={styles.main_block}>
                             <div className={styles.left_block}>
@@ -75,8 +85,8 @@ const ModalMovie = () => {
                                 {errors.poster_path && touched.poster_path ? <div className={`${styles.error_message} ${styles.error_url}`}>{errors.poster_path}</div> : null}
                                 <label htmlFor={genreName}>{genreName}</label>
                                 <div className={styles.select}>
-                                <Field as='div' name={genreName} />
-                                  <DropDownList setFieldValue={setFieldValue}/>
+                                    <Field as='div' name={genreName} />
+                                    <DropDownList setFieldValue={setFieldValue}/>
                                 </div>
                             </div>
                             <div className={styles.right_block}>
@@ -120,7 +130,7 @@ const ModalMovie = () => {
                         <div className={`${styles.calendar_box} ${activeCalendar ? styles.active : styles.inactive}`}>
                             <Calendar className={styles.calendar} onChange={(value, e) => onChangeDate(value, setFieldValue)}
                                       value={calendarDate}/>
-                       </div>
+                        </div>
                     </Form>
                 )}
             </Formik>
@@ -128,4 +138,4 @@ const ModalMovie = () => {
     )
 }
 
-export default ModalMovie
+export default ModalEditMovie
