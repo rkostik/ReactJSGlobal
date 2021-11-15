@@ -20,7 +20,7 @@ const MovieCard = (props) => {
         <div>
             <div className={styles.card}>
                 <div className={styles.card_screen}>
-                <div className={styles.circle} onClick={() => onDdmOpenClick()}>
+                <div className={styles.circle} onClick={onDdmOpenClick}>
                     <div className={styles.circle_list}>
                         <div className={styles.circle_list_item}/>
                         <div className={styles.circle_list_item}/>

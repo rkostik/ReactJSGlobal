@@ -8,11 +8,11 @@ const Confirmation = (props) => {
     const dispatch = useDispatch();
     const onCloseConfirmClick = useCallback(() => {
         dispatch(closeConfirmClick());
-    }, []);
+    }, [dispatch]);
     return(
     <div className={styles.main_block}>
         {props.children}
-        <Close handleClick={()=>onCloseConfirmClick()}/>
+        <Close handleClick={onCloseConfirmClick}/>
     </div>
 )}
 

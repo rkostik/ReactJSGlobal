@@ -15,7 +15,7 @@ const DDMenu = (props) => {
     }, []);
     const onEditClick = useCallback((val) => {
         dispatch(editClick(val));
-    }, []);
+    }, [dispatch]);
     return(
         <div
             className={`${styles.ddm_block} ${ddmActive && item === props.ddmKey ? styles.active : styles.nonactive}`}>

@@ -118,6 +118,11 @@ const headerReducer = (state = {}, action) => {
                 completeActive: action.completeActive,
                 deleteActive: action.deleteActive
             }
+        case actions.SET_SEARCH_TEXT:
+            return {
+                ...state,
+                searchText: action.searchText
+            }
         default:
             return state
     }

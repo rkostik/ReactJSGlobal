@@ -3,7 +3,7 @@
     width: 1200px;
     background: rgba(35, 35, 35, 0.918051);
     mix-blend-mode: normal;
-    backdrop-filter: blur(25px);
+    /*backdrop-filter: blur(25px);*/
     position: absolute;
     display: flex;
     justify-content: center;
