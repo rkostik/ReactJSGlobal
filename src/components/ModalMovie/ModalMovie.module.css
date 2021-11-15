@@ -20,13 +20,12 @@
     margin-left: 60px;
 }
 
-.left_block input, .select {
+.left_block .input {
     width: 525px;
     height: 57px;
     margin-bottom: 30px;
     border-radius: 4px;
     background: rgba(50, 50, 50, 0.94);
-    mix-blend-mode: normal;
     opacity: 0.8;
     border-color: rgba(50, 50, 50, 0.94);
     color:#ffffff;
@@ -45,7 +44,7 @@ label {
     mix-blend-mode: normal;
     opacity: 0.8;
     margin-bottom: 12px;
-    z-index:1;
+/*    z-index:1;*/
 }
 
 .mainTitle {
@@ -109,7 +108,6 @@ label {
     line-height: 24px;
     color: #FFFFFF;
     mix-blend-mode: normal;
-    background: rgba(50, 50, 50, 0.948044);
     mix-blend-mode: normal;
     opacity: 0.8;
     border-radius: 4px;
@@ -135,7 +133,7 @@ input::placeholder, textarea::placeholder, .text_placeholder {
     margin-right: 60px;
 }
 
-.date_select, .select {
+.date_select {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -187,4 +185,44 @@ input::placeholder, textarea::placeholder, .text_placeholder {
     mix-blend-mode: normal;
     background: #232323;
     border: 2px solid #232323;
+}
+
+.select {
+    width: 525px;
+    height: 57px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.error_message{
+    color:   red;
+    position: absolute;
+
+}
+.error_title{
+    margin-top: 95px;
+}
+.error_rating{
+    margin-top: 215px;
+}
+.error_url{
+    margin-top: 215px;
+}
+.error_runtime{
+    margin-top: 335px;
+}
+.error_overview{
+    margin-top: 10px;
+    margin-left: 60px;
 }

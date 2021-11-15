@@ -20,16 +20,16 @@ const MovieCard = (props) => {
         <div>
             <div className={styles.card}>
                 <div className={styles.card_screen}>
-                <div className={styles.circle} onClick={(e) => onDdmOpenClick()}>
+                <div className={styles.circle} onClick={() => onDdmOpenClick()}>
                     <div className={styles.circle_list}>
                         <div className={styles.circle_list_item}/>
                         <div className={styles.circle_list_item}/>
                         <div className={styles.circle_list_item}/>
                     </div>
                 </div>
-                    <DDMenu ddmKey={props.cardKey}/>
+                    <DDMenu ddmKey={props.cardKey} idMovie={props.elem.id}/>
                     <img className={styles.img_block} src={props.elem.poster_path} alt=''
-                         onClick={(e) => onMovieClick()}/>
+                         onClick={() => onMovieClick()}/>
                 </div>
             </div>
             <CardDetail item={props.elem}/>

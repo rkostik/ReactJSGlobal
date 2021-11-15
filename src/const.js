@@ -15,6 +15,11 @@ export const CONST_LIST =
     }
 ;
 
+export const DDL_GENRE={
+    Width: '527px',
+    Height: '57px'
+}
+
 export const CONST_ARR =
     {
         FILTER_LIST: ['all', 'documentary', 'comedy', 'horror', 'crime'],
@@ -42,22 +47,9 @@ export const ADD_MOVIE_ARR = {
     main_title_edit: 'edit movie',
 }
 
-export const initStateHeader = {
-    modalActive: false,
-    viewActive:false,
-    movie: {
-        title: "Pulp Fiction",
-        genre: "Action & Adventure",
-        year: "1994",
-        description: "Faced with life's cruel irony, the unpredictable stories of a well-dressed pair of low-level hitmen; a gangster's statuesque moll, and a double-crossing prizefighter become inextricably intertwined, as the small-time crooks, Honey Bunny and Pumpkin, summon up the courage to hold up their favourite L.A. diner.",
-        url: 'images/pulp_fiction.png',
-        rating: '8.9',
-        runtime: '2h 34min'
-    }
-}
-
 export const initialState = {
     modalActive: false,
+    editActive: false,
     typeWindow: 'add',
     activeCalendar: false,
     ddmActive: false,
@@ -69,6 +61,10 @@ export const initialState = {
     sortValue: ADD_MOVIE_ARR.release_date,
     errMessage: '',
     filterName: 'all',
+    isSelected: true,
+    calendarDate:null,
+    optionSelected: '',
+    movie:[],
     movies: [
         {
             "id": 337167,

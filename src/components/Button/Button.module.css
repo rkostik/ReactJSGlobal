@@ -68,6 +68,14 @@
 
 .txt_confirm {
     margin-top: 18px;
+    font-style: normal;
+    font-weight: 500;
+    font-size:20px;
+    font-height:24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat-Regular";
+    color: #ffffff;
 }
 
 .btn_submit{
@@ -75,6 +83,7 @@
     align-self: center;
     margin-top:60px;
     margin-left:12px;
+    border: 0;
 }
 .btn_reset{
     width: 180px;
@@ -82,9 +91,9 @@
     margin-top:60px;
 }
 
-.txt_reset {
+/*.txt_reset {
     margin-top: 18px;
-}
+}*/
 
 .btn_block_black{
     border: 2px solid #F65261;

@@ -2,6 +2,8 @@ import axios from 'axios';
 import actions from './actionTypes.js';
 import {createActions, handleActions, combineActions} from 'redux-actions';
 import {ADD_MOVIE_ARR, CONST_ARR} from '../../const.js';
+import {stringToDate} from '../../utils/utils.js';
+
 
 export const addMovieClick = () => ({
     type: actions.ADD_MOVIE_WIN,
@@ -13,9 +15,8 @@ export const searchClick = () => ({
     viewActive: true
 })
 
-export const openClick = (active) => ({
-    type: actions.OPEN_CLICK,
-    activeCalendar: active
+export const openClick = () => ({
+    type: actions.OPEN_CLICK
 })
 
 export const closeAddMovieClick = () => ({
@@ -32,6 +33,7 @@ export const ddmCloseClick = () => {
     })
 }
 
+
 export const deleteClick = () => {
     return ({
         type: actions.DELETE_CLICK,
@@ -40,12 +42,27 @@ export const deleteClick = () => {
     })
 }
 
-export const editClick = () => {
+export const editClick = (val) => {
+    return dispatch => {
+        axios.get('http://localhost:4000/movies/'+val, {
+        })
+            .then(res => {
+                dispatch(editMovieList(res.data));
+            })
+            .catch(err => {
+                dispatch(populateMoviesListErr(err.message));
+            });
+    };
+}
+
+export const editMovieList = (data) => {
     return ({
         type: actions.EDIT_CLICK,
-        modalActive: true,
+        editActive: true,
         typeWindow: 'edit',
-        ddmActive: false
+        ddmActive: false,
+        calendarDate: stringToDate(data.release_date),
+        movie: data
     })
 }
 
@@ -55,6 +72,30 @@ export const ddmOpenClick = (cardKey, isActive) => {
         item: cardKey,
         ddmActive: isActive
     })
+}
+
+export const editSubmit = (values) => {
+    console.log(values);
+    const dataMovie = JSON.parse(values);
+    return dispatch => {
+        axios.put('http://localhost:4000/movies', {
+            id: dataMovie.id,
+            title: dataMovie.title,
+            poster_path: dataMovie.poster_path,
+            vote_average: parseFloat(dataMovie.vote_average),
+            runtime: parseInt(dataMovie.runtime, 10),
+            overview: dataMovie.overview,
+            release_date: dataMovie.release_date,
+            genres: typeof dataMovie.genre === 'Array'?dataMovie.genre:dataMovie.genre.split(' ')
+        })
+            .then(res => {
+            })
+            .catch(err => {
+                dispatch(populateMoviesListErr(err.message));
+            });
+        dispatch(closeAddMovieClick());
+    };
+
 }
 
 export const movieClick = (cardKey, isActive) => {
@@ -109,7 +150,7 @@ export const filterClick = (filterName) => {
     return dispatch => {
         axios.get('http://localhost:4000/movies', {
             params: {
-                filter: filterName === CONST_ARR.FILTER_LIST[0]?null:filterName,
+                filter: filterName === CONST_ARR.FILTER_LIST[0] ? null : filterName,
                 limit: 6
             }
         })
@@ -129,4 +170,82 @@ export const filterMovieList = (movies, amount, filterName) => {
         amount: amount,
         filterName: filterName
     })
+}
+
+export const changeDate = (date) => {
+    return ({
+        type: actions.CHANGE_DATE,
+        calendarDate: date,
+        activeCalendar: false
+    })
+}
+
+export const changeSelect = (val) => {
+    return ({
+        type: actions.SELECT_GENRE,
+        optionSelected: val
+    })
+}
+
+export const resetForm = () => {
+    return ({
+        type: actions.RESET_FORM,
+        calendarDate:null,
+        optionSelected: ''
+    })
+}
+
+export const submitForm = (values) => {
+    const dataMovie = JSON.parse(values);
+    return dispatch => {
+        axios.post('http://localhost:4000/movies', {
+            title: dataMovie.title,
+            poster_path: dataMovie.poster_path,
+            vote_average: parseFloat(dataMovie.vote_average),
+            runtime: parseInt(dataMovie.runtime, 10),
+            overview: dataMovie.overview,
+            release_date: dataMovie.release_date,
+            genres: dataMovie.genre.split(' ')
+        })
+            .then(res => {
+                dispatch(afterSubmitForm());
+            })
+            .catch(err => {
+                dispatch(populateMoviesListErr(err.message));
+            });
+        dispatch(closeAddMovieClick());
+    };
+
+}
+
+export const afterSubmitForm = () => {
+    return ({
+        type: actions.AFTER_SUBMIT,
+        calendarDate:null,
+        optionSelected: '',
+        completeActive: true
+    })
+}
+
+export const closeConfirmClick = () => {
+    return ({
+        type: actions.CLOSE_CONFIRM_WIN,
+        completeActive: false,
+        deleteActive: false
+    })
+}
+
+export const confirmDel = (val) => {
+    console.log(' --- '+val);
+    return dispatch => {
+        axios.delete('http://localhost:4000/movies/'+val, {
+        })
+            .then(res => {
+                dispatch(closeDelWindowClick());
+                dispatch(filterClick('all'));
+            })
+            .catch(err => {
+                dispatch(populateMoviesListErr(err.message));
+            });
+    };
 }
