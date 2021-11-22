@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open --hot",
+    "dev": "webpack-dev-server --mode development --open --history-api-fallback --hot",
     "start": "npm run dev",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js"
   },
@@ -14,9 +14,10 @@
   "dependencies": {
     "axios": "^0.24.0",
     "cross-env": "^7.0.3",
-    "css-loader": "^6.5.0",
+    "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "formik": "^2.2.9",
+    "history": "^5.1.0",
     "json-loader": "^0.5.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -24,7 +25,8 @@
     "react-css-modules": "^4.7.11",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
-    "react-select": "^5.1.0",
+    "react-router-dom": "^5.3.0",
+    "react-select": "^5.2.1",
     "redux": "^4.1.2",
     "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.9",
@@ -40,7 +42,7 @@
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
-    "webpack": "^5.61.0",
+    "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
   }

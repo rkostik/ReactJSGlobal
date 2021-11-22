@@ -64,6 +64,7 @@ export const initialState = {
     isSelected: true,
     calendarDate:null,
     optionSelected: '',
+    searchText: '',
     movie:[],
     movies: [
         {

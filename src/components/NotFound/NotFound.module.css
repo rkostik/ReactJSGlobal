@@ -1,0 +1,23 @@
+.wrap_text{
+    display: flex;
+    flex-direction: column;
+    background: #232323;
+    min-width: 1200px;
+    min-height: 1800px;
+    color:#ffffff;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.icon_block{
+    width: 20em;
+    height: 20em;
+    align-self: center;
+}
+
+.block_404{
+    font-size: 100px;
+}

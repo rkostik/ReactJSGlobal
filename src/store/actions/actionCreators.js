@@ -75,7 +75,6 @@ export const ddmOpenClick = (cardKey, isActive) => {
 }
 
 export const editSubmit = (values) => {
-    console.log(values);
     const dataMovie = JSON.parse(values);
     return dispatch => {
         axios.put('http://localhost:4000/movies', {
@@ -89,6 +88,7 @@ export const editSubmit = (values) => {
             genres: typeof dataMovie.genre === 'Array'?dataMovie.genre:dataMovie.genre.split(' ')
         })
             .then(res => {
+                dispatch(filterClick('all'));
             })
             .catch(err => {
                 dispatch(populateMoviesListErr(err.message));
@@ -236,7 +236,6 @@ export const closeConfirmClick = () => {
 }
 
 export const confirmDel = (val) => {
-    console.log(' --- '+val);
     return dispatch => {
         axios.delete('http://localhost:4000/movies/'+val, {
         })
@@ -248,4 +247,30 @@ export const confirmDel = (val) => {
                 dispatch(populateMoviesListErr(err.message));
             });
     };
+}
+
+export const searchMovieClick = (searchStr='', searchBy='title') => {
+
+    return dispatch => {
+        axios.get('http://localhost:4000/movies', {
+            params: {
+                search:  searchStr,
+                searchBy: searchBy,
+                limit: 6
+            }
+        })
+            .then(res => {
+                dispatch(filterMovieList(res.data.data, res.data.totalAmount, ''));
+            })
+            .catch(err => {
+                dispatch(populateMoviesListErr(err.message));
+            });
+    };
+}
+
+export const setSearchText = (val) => {
+    return ({
+        type: actions.SET_SEARCH_TEXT,
+        searchText: val
+    })
 }

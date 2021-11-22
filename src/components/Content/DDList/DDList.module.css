@@ -37,10 +37,6 @@ select{
     /*direction: rtl;*/
 }
 
-select::-ms-expand{
-    display: none;
-}
-
 .select_block::after{
     content:'\25BC';
     display:block;
