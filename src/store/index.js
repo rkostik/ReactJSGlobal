@@ -3,7 +3,7 @@ import {createStore,applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import * as actionCreators from '../store/actions/actionCreators.js';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import {initialState, initStateHeader} from "../const";
+import {initialState} from "../const";
 import headerReducer from "./reducers/headerReducer";
 
 const composeEnhancers = composeWithDevTools({

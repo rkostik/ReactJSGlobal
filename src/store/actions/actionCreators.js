@@ -1,7 +1,6 @@
 import axios from 'axios';
 import actions from './actionTypes.js';
-import {createActions, handleActions, combineActions} from 'redux-actions';
-import {ADD_MOVIE_ARR, CONST_ARR} from '../../const.js';
+import {CONST_ARR} from '../../const.js';
 import {stringToDate} from '../../utils/utils.js';
 
 

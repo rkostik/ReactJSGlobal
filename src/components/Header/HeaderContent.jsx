@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Header from './Header.jsx';
 import HeaderDetail from './HeaderDetail/HeaderDetail.jsx';
 import {useSelector} from 'react-redux';
-import {useHistory, useLocation, useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import {searchMovieClick} from "../../store/actions/actionCreators";
 import {useDispatch} from 'react-redux';
 

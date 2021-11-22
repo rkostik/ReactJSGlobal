@@ -4,7 +4,6 @@ import styles from './Header.module.css';
 import BtnAdd from "./BtnAdd/BtnAdd.jsx";
 import Search from "./Search/Search.jsx";
 import PropTypes from 'prop-types';
-import {useParams} from 'react-router-dom';
 
 
 const Header = () => {

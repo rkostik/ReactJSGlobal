@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app [APP] - #2. - renders correctly 1`] = `
+<Fragment>
+  <div>
+    <div>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/search/:searchQuery"
+        />
+        <Redirect
+          from="/"
+          to="/search"
+        />
+        <Route
+          component={[Function]}
+          path="*"
+        />
+      </Switch>
+      <div>
+        <ModalMovieWrap />
+        <ModalRemoval />
+        <ModalCompletion />
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
