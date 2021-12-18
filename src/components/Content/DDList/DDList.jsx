@@ -11,10 +11,10 @@ const DDList = () => {
   return  (
         <div className={styles.main_dd}>
             <div className={styles.select_block}>
-                <select onChange={(e)=>onChangeSortClick(e.target.value)}>
-                    <option>release date</option>
-                    <option>rating</option>
-                    <option>title</option>
+                <select data-testid='select' onChange={(e)=>onChangeSortClick(e.target.value)}>
+                    <option data-testid='select-option'>release date</option>
+                    <option data-testid='select-option'>rating</option>
+                    <option data-testid='select-option'>title</option>
                 </select>
             </div>
         </div>

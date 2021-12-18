@@ -1,7 +1,7 @@
-import {initialState, initStateHeader} from '../../const.js';
+import {initialState} from '../../const.js';
 import actions from '../actions/actionTypes.js';
 
-const headerReducer = (state = {}, action) => {
+const headerReducer = (state = {initialState}, action) => {
     switch (action.type) {
         case actions.ADD_MOVIE_WIN:
             return {
