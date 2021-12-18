@@ -12,10 +12,8 @@ const composeEnhancers = composeWithDevTools({
     traceLimit: 25,
 })
 
-const persistedState = sessionStorage.getItem('state') ? JSON.parse(sessionStorage.getItem('state')) : {};
-const store= createStore(headerReducer, initialState, composeEnhancers(applyMiddleware(thunk)));
-store.subscribe(() => {
-    sessionStorage.setItem('state', JSON.stringify(store.getState()));
-})
+
+const store= createStore(headerReducer, {...window.PRELOAD_STATE});
+
 
 export default store
