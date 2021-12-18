@@ -2,7 +2,6 @@ import React, {useCallback} from 'react';
 import styles from './ModalMovie.module.css';
 import Close from '../Confirmation/Close/Close.jsx';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 import {ADD_MOVIE_ARR} from '../../const';
 import {useSelector, useDispatch} from 'react-redux';
 import {closeAddMovieClick, openClick, changeDate, submitForm, resetForm} from "../../store/actions/actionCreators";
